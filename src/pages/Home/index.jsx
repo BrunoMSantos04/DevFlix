@@ -32,12 +32,12 @@ function Home (){
                 getOnAirSeries(),
                 getPeople()
             ])
-                .then((result) => {
-                    setMovie(result[0])
-                    setTopMovie(result[1])
-                    setTopSerie(result[2])
-                    setOnAair(result[3])
-                    setPeople(result[4])
+                .then(([movie, topMovie, topSerie, onAir, topPeople]) => {
+                    setMovie(movie)
+                    setTopMovie(topMovie)
+                    setTopSerie(topSerie)
+                    setOnAair( onAir)
+                    setPeople(topPeople)
                 })
                 .catch((error) => console.error(error))
 
